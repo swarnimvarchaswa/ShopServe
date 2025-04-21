@@ -1,0 +1,170 @@
+/* Custom styles for ShopServe website */
+
+/* Body styles */
+body {
+    @apply bg-white text-gray-800 font-sans;
+}
+
+/* Navigation styles */
+nav {
+    @apply bg-white shadow-sm;
+}
+
+nav a {
+    @apply text-gray-600 hover:text-gray-900;
+}
+
+/* Hero section styles */
+.hero {
+    @apply bg-gray-100 py-20 text-center;
+}
+
+.hero h1 {
+    @apply text-4xl font-bold mb-4;
+}
+
+.hero p {
+    @apply text-lg mb-8;
+}
+
+/* Button styles */
+.btn {
+    @apply bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700;
+}
+
+/* Footer styles */
+footer {
+    @apply bg-gray-800 text-white py-4 text-center;
+}
+
+/* Base font settings */
+body, html {
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Serif font settings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Base font weights */
+.font-thin, .ultra-thin {
+  font-weight: 100 !important;
+}
+
+.font-light {
+  font-weight: 300 !important;
+}
+
+.font-normal {
+  font-weight: 400 !important;
+}
+
+.font-medium {
+  font-weight: 500 !important;
+}
+
+/* Custom letter spacing */
+.tracking-wider {
+  letter-spacing: 0.15em;
+}
+
+.tracking-widest {
+  letter-spacing: 0.2em;
+}
+
+/* Make sure Roboto is used in specific contexts */
+p, span, div, button, a, input, textarea, select {
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-sans {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif !important;
+}
+
+/* Custom font styling for ShopServe - Luxury Women's Workwear */
+
+/* General font smoothing for better rendering */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Font weight helpers */
+.extra-light {
+  font-weight: 200 !important;
+}
+
+.light {
+  font-weight: 300 !important;
+}
+
+/* Custom letter spacing classes */
+.ls-wide {
+  letter-spacing: 0.1em;
+}
+
+.ls-wider {
+  letter-spacing: 0.15em;
+}
+
+.ls-widest {
+  letter-spacing: 0.25em;
+}
+
+/* Luxury brand typography */
+.brand-heading {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.15em;
+}
+
+.tagline {
+  font-weight: 200;
+  letter-spacing: 0.2em;
+  opacity: 0.85;
+}
+
+/* Animation for text elements */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+/* Custom hover effects */
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}

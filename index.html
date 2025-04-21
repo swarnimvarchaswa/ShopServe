@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopServe - Serving Sophistication</title>
+    <!-- Google Fonts - Enhanced with more weights -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Updated font import with better format -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Playfair+Display:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Roboto', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'neutral': {
+                            50: '#fafafa',
+                            100: '#f5f5f5',
+                            200: '#e5e5e5',
+                            300: '#d4d4d4',
+                            400: '#a3a3a3',
+                            500: '#737373',
+                            600: '#525252',
+                            700: '#404040',
+                            800: '#262626',
+                            900: '#171717',
+                        },
+                        'sunset': {
+                            100: '#fff4e8',
+                            200: '#ffecd9',
+                            300: '#ffd1a3',
+                            400: '#ffb366',
+                        },
+                        'amber': {
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* Inline critical CSS for better font rendering */
+        body {
+            font-family: 'Roboto', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            background-color: #ffffff;
+        }
+
+        .ultra-thin {
+            font-weight: 100 !important;
+            letter-spacing: 0.2em;
+        }
+
+        .brand-heading {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.15em;
+        }
+
+        /* Direct font application to headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Direct font application to body text */
+        p,
+        span,
+        div,
+        button,
+        a {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Animation for fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        /* Neutral gradient backgrounds */
+        .bg-premium-gradient {
+            background: linear-gradient(135deg, #fafafa 0%, #fff 100%);
+        }
+
+        /* Subtle border accents */
+        .border-accent-subtle {
+            border: 1px solid rgba(163, 163, 163, 0.15);
+        }
+
+        /* Sunset glow for subtle accents */
+        .sunset-glow {
+            box-shadow: 0 0 15px rgba(255, 179, 102, 0.15);
+        }
+
+        .sunset-border {
+            border-right: 2px solid rgba(217, 119, 6, 0.5);
+            border-bottom: 2px solid rgba(217, 119, 6, 0.5);
+        }
+
+        /* Button hover effect with sunset glow */
+        .btn-sunset:hover {
+            box-shadow: 0 2px 8px rgba(217, 119, 6, 0.15);
+        }
+
+        /* Subtle shadow for cards */
+        .subtle-shadow {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800" style="font-family: 'Roboto', sans-serif;">
+    <header class="bg-white shadow-sm">
+    </header>
+
+    <main class="max-w-md mx-auto">
+        <div class="relative h-svh left-0 right-0 bg-neutral-50">
+            <!-- Text content with higher z-index -->
+            <div class="flex flex-col items-center justify-center pt-6 px-4 text-center relative z-10">
+                <!-- Logo without dot accent -->
+                <h1 class="font-serif text-3xl text-neutral-800 tracking-wider mb-2 ultra-thin">
+                    ShopServe
+                </h1>
+                <!-- Tagline -->
+                <h2 class="font-sans text-base md:text-xl font-light text-neutral-500 mb-6 tracking-widest">Serving
+                    Sophistication</h2>
+
+                <!-- Tailored for women who lead - Using direct font-family -->
+                <p class="text-3xl text-neutral-500 my-8 font-light" style="font-family: 'Roboto', sans-serif;">
+                    Tailored for women who lead</p>
+
+                <!-- Button with amber border -->
+                <a href="#collections"
+                    class="bg-transparent text-neutral-600 border border-orange-500/60 px-8 py-3 rounded-full hover:bg-neutral-50 transition-all duration-300 mb-10 font-light tracking-widest text-sm uppercase shadow-sm hover:shadow-md relative btn-sunset"
+                    style="font-family: 'Roboto', sans-serif;">
+                    Explore Summer Collections
+                </a>
+            </div>
+
+            <!-- Hero image with lower z-index -->
+            <div class="absolute bottom-0 z-0 w-full">
+                <img src="images/sec.png" alt="Hero Image" class="w-full max-w-md mx-auto object-cover">
+            </div>
+        </div>
+
+        <!-- Collections Section -->
+        <section id="collections" class="py-16 px-6 bg-white">
+            <div class="max-w-6xl mx-auto space-y-8">
+                <h2 class="font-serif text-3xl text-center mb-4 text-neutral-800 ultra-thin tracking-wider">
+                    Our Collections
+                </h2>
+                <p class="text-center text-neutral-500 mb-12 max-w-lg mx-auto">Discover our curated selection of
+                    sophisticated workwear designed for the modern professional woman.</p>
+
+                <!-- power Suits - with subtle shadow -->
+                <div class="w-full aspect-[4/5] rounded-3xl shadow-2xl shadow-neutral-200">
+                    <div class="">
+                        <img src="images/power.png" alt="Power Suits" class="w-full h-full object-cover rounded-3xl">
+                    </div>
+                </div>
+                <p class="text-2xl m-4 text-neutral-700">Power Suits</p>
+
+                <div class="w-full aspect-[4/5] rounded-3xl shadow-2xl shadow-neutral-200">
+                    <div class="">
+                        <img src="images/yellow.png" alt="Sartorial Shirts"
+                            class="w-full h-full object-cover rounded-3xl">
+                    </div>
+                </div>
+                <p class="text-2xl m-4 text-neutral-700">Sartorial Shirts</p>
+
+                <div class="w-full aspect-[4/5] rounded-3xl shadow-2xl shadow-neutral-200">
+                    <div class="">
+                        <img src="images/bluee.jpg" alt="Sartorial Shirts"
+                            class="w-full h-full object-cover rounded-3xl">
+                    </div>
+                </div>
+                <p class="text-2xl m-4 text-neutral-700">Tailored Waistcoats</p>
+
+                <div class="w-full aspect-[4/5] rounded-3xl shadow-2xl shadow-neutral-200">
+                    <div class="">
+                        <img src="images/red.jpg" alt="Sartorial Shirts" class="w-full h-full object-cover rounded-3xl">
+                    </div>
+                </div>
+                <p class="text-2xl m-4 text-neutral-700">Tailored Blazers</p>
+
+                <div class="w-full aspect-[4/5] rounded-3xl shadow-2xl shadow-neutral-200">
+                    <div class="">
+                        <img src="images/black.jpg" alt="Sartorial Shirts"
+                            class="w-full h-full object-cover rounded-3xl">
+                    </div>
+                </div>
+                <p class="text-2xl m-4 text-neutral-700">Versatile Stylish Sets</p>
+
+                <div class="w-full aspect-[4/5] rounded-3xl shadow-2xl shadow-neutral-200">
+                    <div class="">
+                        <img src="images/last.jpg" alt="Sartorial Shirts"
+                            class="w-full h-full object-cover rounded-3xl">
+                    </div>
+                </div>
+                <p class="text-2xl m-4 text-neutral-700">Timeless Pants and Skirts</p>
+            </div>
+        </section>
+
+        <!-- Celebrity Endorsement Section -->
+        <section class="py-16 px-6 bg-neutral-50">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="font-serif text-3xl text-center mb-6 text-neutral-800 ultra-thin tracking-wider">
+                    CELEBRITY
+                </h2>
+                
+                <div class="flex flex-col items-center">
+                    <div class="w-full aspect-[4/5] rounded-2xl shadow-2xl shadow-neutral-200 overflow-hidden mb-8">
+                        <img src="images/dv.jpg" alt="Dhvani Bhanushali" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <h3 class="font-serif text-2xl text-neutral-800 mb-4 tracking-wide text-center">DHVANI BHANUSHALI</h3>
+                    
+                    <p class="text-center text-neutral-600 mb-8">
+                        Thrilled to see the stunning Dhvani Bhanushali rocking our latest collection from Shop Serve! She shines in our chic waistcoat and custom-tailored pants, epitomizing elegance and style. Discover the look that defines you.
+                    </p>
+                    
+                    <a href="#collections" class="bg-white text-neutral-600 border border-orange-500/70 px-8 py-3 rounded-full hover:bg-neutral-50 transition-all duration-300 shadow-sm hover:shadow-md tracking-widest text-sm uppercase btn-sunset">
+                        SHOP NOW
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-16 px-6 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="font-serif text-3xl text-center mb-12 text-neutral-800 ultra-thin tracking-wider">
+                    What Our Clients Say
+                </h2>
+
+                <div class="grid grid-cols-1 gap-8">
+                    <!-- Testimonial 1 - Improved design -->
+                    <div class="p-8 rounded-3xl bg-gradient-to-br from-neutral-200 to-white shadow-2xl shadow-neutral-200">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-neutral-100 overflow-hidden mr-4 flex-shrink-0 relative">
+                                <!-- First image: Young business woman in cream suit -->
+                                <img src="https://as1.ftcdn.net/jpg/05/62/04/98/1000_F_562049884_yBZOhNIrFYdpJOLmN1qiQRcioJhsqjHz.webp" 
+                                     alt="Testimonial" 
+                                     class="absolute inset-0 w-full h-full object-cover object-top">
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-lg text-neutral-800">Aarti Sharma</h4>
+                                <p class="text-neutral-500 text-sm">Marketing Director</p>
+                            </div>
+                        </div>
+                        <p class="text-neutral-600">
+                            "The tailoring at ShopServe is absolutely impeccable. Each piece fits like it was made just
+                            for me, and the quality of the fabrics is exceptional. I receive compliments every time I
+                            wear their blazers to important meetings."
+                        </p>
+                        <div class="mt-4 flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 opacity-80" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 opacity-80" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 opacity-80" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 opacity-80" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 opacity-80" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 - Improved design -->
+                    <div class="p-8 rounded-3xl bg-gradient-to-br from-neutral-200 to-white shadow-2xl shadow-neutral-200">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-neutral-100 overflow-hidden mr-4 flex-shrink-0 relative">
+                                <!-- Second image: Headshot close-up -->
+                                <img src="https://www.shutterstock.com/image-photo/headshot-close-face-portrait-young-260nw-2510015507.jpg" 
+                                     alt="Testimonial" 
+                                     class="absolute inset-0 w-full h-full object-cover object-[center_top]">
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-lg text-neutral-800">Meera Patel</h4>
+                                <p class="text-neutral-500 text-sm">Financial Advisor</p>
+                            </div>
+                        </div>
+                        <p class="text-neutral-600">
+                            "As someone who is constantly in client meetings, I need to look polished and professional.
+                            ShopServe has transformed my work wardrobe. Their power suits give me the confidence I need
+                            when presenting to executives."
+                        </p>
+                        <div class="mt-4 flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 opacity-80" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 opacity-80" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 opacity-80" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 opacity-80" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 opacity-80" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 - Improved design -->
+                    <div class="p-8 rounded-3xl bg-gradient-to-br from-neutral-200 to-white shadow-2xl shadow-neutral-200">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-neutral-100 overflow-hidden mr-4 flex-shrink-0 relative">
+                                <!-- Third image: Business owner working -->
+                                <img src="https://img.freepik.com/free-photo/business-owner-working-their-strategy_23-2149241318.jpg" 
+                                     alt="Testimonial" 
+                                     class="absolute inset-0 w-full h-full object-cover object-[center_top]">
+                            </div>
+                            <div>
+                                <h4 class="font-serif text-lg text-neutral-800">Priya Joshi</h4>
+                                <p class="text-neutral-500 text-sm">Entrepreneur</p>
+                            </div>
+                        </div>
+                        <p class="text-neutral-600">
+                            "The custom tailoring service at ShopServe is worth every penny. They took the time to
+                            understand my style preferences and body measurements. Now I have a wardrobe that perfectly
+                            fits my lifestyle and represents my personal brand."
+                        </p>
+                        <div class="mt-4 flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 opacity-80" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 opacity-80" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 opacity-80" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 opacity-80" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 opacity-80" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="py-12 px-6 bg-neutral-50">
+            <div class="max-w-md mx-auto text-center">
+                <h3 class="font-serif text-2xl mb-4 text-neutral-800">
+                    Join Our Newsletter
+                </h3>
+                <p class="text-neutral-600 mb-6">Stay updated with our latest collections and exclusive offers.</p>
+                <form class="flex flex-col space-y-3">
+                    <input type="email" placeholder="Your email address"
+                        class="px-4 py-3 rounded-full focus:outline-none border border-neutral-200 focus:border-neutral-400"
+                        required>
+                    <button type="submit"
+                        class="bg-neutral-200 text-neutral-700 px-6 py-3 rounded-full">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-12 px-6 bg-white text-neutral-700 border-t border-neutral-100">
+            <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-transparent to-sunset-100 opacity-30 rounded-bl-full"></div>
+            <div class="max-w-md mx-auto">
+                <div class="mb-8 text-center">
+                    <h3 class="font-serif text-2xl mb-4 ultra-thin tracking-wider">ShopServe</h3>
+                    <p class="text-neutral-500 mb-6">Serving sophistication through curated women's workwear.</p>
+                    <div class="flex justify-center space-x-6">
+                        <a href="#" class="text-neutral-400 hover:text-neutral-600 transition-colors duration-300">
+                            <!-- Instagram icon -->
+                        </a>
+                        <!-- Other social icons -->
+                    </div>
+                </div>
+                
+                <!-- Footer content -->
+                
+                <div class="border-t border-neutral-100 pt-6 text-center">
+                    <p class="text-neutral-400 text-sm">&copy; 2025 ShopServe. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Simple animations
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add animation classes for elements
+            document.querySelectorAll('.animate-fade-in').forEach(function (element) {
+                // Add observer to trigger animations when scrolled into view
+                let observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = "1";
+                            entry.target.style.transform = "translateY(0)";
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                observer.observe(element);
+            });
+
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
